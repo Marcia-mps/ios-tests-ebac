@@ -1,7 +1,5 @@
 name: Mobile Tests CI
 
-name: Mobile Tests CI
-
 on:
   push:
     branches: [ main ]
