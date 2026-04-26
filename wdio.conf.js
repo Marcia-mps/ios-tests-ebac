@@ -1,11 +1,14 @@
 exports.config = {
-    //
+    user: process.env.BROWSERSTACK_USERNAME,
+    key: process.env.BROWSERSTACK_ACCESS_KEY,
+    hostname: 'hub.browserstack.com',
+    port: 443,
+    protocol: 'https',
+    // 
     // ====================
     // Runner Configuration
     // ====================
     // WebdriverIO supports running e2e tests as well as unit and component tests.
-    runner: 'local',
-    port: 4723,
     //
     // ==================
     // Specify Test Files
@@ -51,13 +54,12 @@ exports.config = {
     // https://saucelabs.com/platform/platform-configurator
     //
     capabilities: [{
-        // capabilities for local Appium web tests on iOS
         platformName: 'iOS',
-        browserName: 'Safari',
-        'appium:deviceName': 'iPhone Simulator',
-        'appium:platformVersion': '16.4',
-        'appium:automationName': 'XCUITest'
-    }],
+        'appium:deviceName': 'iPhone 14',
+        'appium:platformVersion': '16',
+        'appium:automationName': 'XCUITest',
+        'appium:app': 'bs://123abc456def789',
+    }]
 
     //
     // ===================
@@ -115,7 +117,7 @@ exports.config = {
     // Make sure you have the wdio adapter package for the specific framework installed
     // before running any tests.
     framework: 'mocha',
-    
+
     //
     // The number of times to retry the entire specfile when it fails as a whole
     // specFileRetries: 1,
