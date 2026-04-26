@@ -54,12 +54,12 @@ exports.config = {
     // https://saucelabs.com/platform/platform-configurator
     //
     capabilities: [{
-        platformName: 'iOS',
-        'appium:deviceName': 'iPhone 14',
-        'appium:platformVersion': '16',
-        'appium:automationName': 'XCUITest',
-        'appium:app': 'bs://123abc456def789',
-    }]
+    platformName: 'iOS',
+    'appium:deviceName': 'iPhone 14',
+    'appium:platformVersion': '16',
+    'appium:automationName': 'XCUITest',
+    'appium:app': 'bs://123abc456def789',
+}],
 
     //
     // ===================
